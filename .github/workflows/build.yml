@@ -85,6 +85,7 @@ jobs:
           libtool
           autoconf
           automake-wrapper
+          libfuse-dev
     - name: prepare environment
       run: |
           dest=`echo ${{ matrix.msystem }} |tr [:upper:] [:lower:]`
