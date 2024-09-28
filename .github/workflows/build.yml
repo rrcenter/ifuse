@@ -117,7 +117,7 @@ jobs:
       with:
         github_token: ${{secrets.GITHUB_TOKEN}}
         workflow: build.yml
-        name: libimobiledevice-latest_${{env.target_triplet}}
+        name: libimobiledevice-latest_${{ matrix.arch }}-${{ env.dest }}
         repo: libimobiledevice/libimobiledevice
     - name: install external dependencies
       run: |
